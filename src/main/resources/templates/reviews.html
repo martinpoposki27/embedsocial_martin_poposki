@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Reviews</title>
+</head>
+<body>
+<h1>Filtered Reviews</h1>
+<p>For the criteria: </p>
+<table>
+    <tr>
+        <td>Order by rating:</td>
+        <td th:text="${orderByRating}"></td>
+    </tr>
+    <tr>
+        <td>Minimum rating:</td>
+        <td th:text="${minRating}"></td>
+    </tr>
+    <tr>
+        <td>Order by date:</td>
+        <td th:text="${orderByDate}"></td>
+    </tr>
+    <tr>
+        <td>Prioritiza text:</td>
+        <td th:text="${prioritizeText}"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Review ID</th>
+        <th>Rating</th>
+        <th>Date</th>
+        <th>Text</th>
+    </tr>
+    <!-- Iterate over the reviews and display them -->
+    <tr th:each="review : ${reviews}">
+        <td th:text="${review.reviewId}"></td>
+        <td th:text="${review.rating}"></td>
+        <td th:text="${review.reviewCreatedOnDate}"></td>
+        <td th:text="${review.reviewFullText}"></td>
+    </tr>
+</table>
+</body>
+</html>

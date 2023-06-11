@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Reviews</title>
+</head>
+<body>
+<h1>FILTER REVIEWS</h1>
+<form action="/filter-reviews" method="GET">
+    <label for="orderByRating">Order by rating:</label>
+    <select id="orderByRating" name="orderByRating">
+        <option value="highest">Highest first</option>
+        <option value="lowest">Lowest first</option>
+    </select>
+    <br>
+
+    <label for="minRating">Minimum rating:</label>
+    <select id="minRating" name="minRating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+
+    <label for="orderByDate">Order by date:</label>
+    <select id="orderByDate" name="orderByDate">
+        <option value="oldest">Oldest first</option>
+        <option value="newest">Newest first</option>
+    </select>
+    <br>
+
+    <label for="prioritizeText">Prioritize by text:</label>
+    <select id="prioritizeText" name="prioritizeText">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br>
+
+    <button type="submit">Filter</button>
+</form>
+</body>
+</html>
